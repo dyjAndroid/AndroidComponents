@@ -1,5 +1,6 @@
 package com.example.roomdemo;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
@@ -19,4 +20,7 @@ public interface UserDao {
 
     @Query("SELECT * FROM user WHERE name = :name")
     List<User> queryUsersByName(String name);
+
+    @Query("SELECT * FROM user")
+    LiveData<List<User>> queryUsersByName();
 }

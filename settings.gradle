@@ -1,1 +1,1 @@
-include ':viewmodelsdemo', ':roomdemo'
+include ':viewmodelsdemo', ':roomdemo', ':databindingdemo'

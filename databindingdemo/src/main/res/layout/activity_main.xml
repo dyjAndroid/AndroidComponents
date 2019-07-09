@@ -6,6 +6,9 @@
         <variable
             name="user"
             type="User" />
+        <variable
+            name="observableUser"
+            type="com.example.databindingdemo.ObservableUser" />
     </data>
 
     <LinearLayout
@@ -18,13 +21,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@{user.name}" />
+            android:text="@{observableUser.name}" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@{String.valueOf(user.age)}" />
+            android:text="@{String.valueOf(observableUser.age)}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/set"
+            android:layout_marginTop="20dp"
+            android:text="Setting"
+            android:onClick="onClick"/>
     </LinearLayout>
 
 </layout>

@@ -9,6 +9,6 @@ import androidx.paging.DataSource;
 public class MyDataSourceFactory extends DataSource.Factory<Integer, User> {
     @Override
     public DataSource<Integer, User> create() {
-        return new MyItemDataSource();
+        return new MyDataSource();
     }
 }
